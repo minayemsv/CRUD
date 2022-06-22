@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "..\\..\\source\\repos\\Demo1DML\\Demo1DML.sln",
+    "projects": [
+      "Demo1DML.csproj"
+    ]
+  }
+}
