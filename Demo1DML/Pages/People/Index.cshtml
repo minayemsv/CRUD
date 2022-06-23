@@ -1,0 +1,38 @@
+﻿@page
+@model Demo1DML.Pages.People.IndexModel
+@{
+}
+
+<br>
+<h2>List of People</h2>
+<a class='btn-primary btn-primary btn-sm' href='/People/Create'>New Person</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Date of birth</th>
+            <th>Email</th>
+            <th>Created At</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.listPeople)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.DateofBirth</td>
+                <td>@item.Email</td>
+                <td>@item.created_at</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="/People/Edit?Id=@item.Id">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="/People/Delete?Id=@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
